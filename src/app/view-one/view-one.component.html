@@ -1,0 +1,81 @@
+<div class="container" style="text-align: center">
+  <div class="row mb-3" style="text-align: center">
+    <div class="col-md-12"><h3>All Books</h3></div><br>
+  </div>
+  <div class="row" style="text-align: center" *ngIf="books.length>0">
+    <div *ngFor="let book of books" class="col-md-6">
+      <div class="card text-center mb-3 border-success">
+        <div class="card-header">
+          Book Card
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> {{book.name}} </h5>
+          <p class="card-text"> published By: {{book.publisher}} </p>
+          <p>Country:{{book.country}}</p>
+          
+        </div>
+        <div class="card-footer text-white">
+          <a  class="btn btn-success" [routerLink]="['/book', getItemId(book)]" >View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+
+<div class="container" style="text-align: center">
+  <div class="row mb-3" style="text-align: center">
+    <div class="col-md-12"><h3>All Houses</h3></div><br>
+  </div>
+  <div class="row" style="text-align: center">
+    <div *ngFor="let house of houses" class="col-md-6">
+      <div class="card text-center mb-3 border-danger">
+        <div class="card-header">
+          House Card
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> {{house.name}} </h5>
+          <p class="card-text"> Region: {{house.region}} </p>
+          
+          
+        </div>
+        <div class="card-footer text-white">
+          <a class="btn btn-danger" [routerLink]="['/house', getItemId(house)]" >View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+
+<div class="container" style="text-align: center">
+  <div class="row mb-3" style="text-align: center">
+    <div class="col-md-12"><h3>All characters</h3></div><br>
+  </div>
+  <div class="row" style="text-align: center">
+       
+        <div *ngFor="let  character of  characters" class="col-md-6">
+      <div class="card text-center mb-3 border-warning">
+        <div class="card-header">
+          character Card
+        </div>
+        <div class="card-body">
+
+          <h5 class="card-title">Name: {{character.culture}} </h5>
+          
+          <p>Gender: {{character.gender}}</p>
+          
+          
+          
+        </div>
+        <div class="card-footer text-white">
+          <a href="#" class="btn btn-warning" [routerLink]="['/character', getItemId(character)]"  >View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

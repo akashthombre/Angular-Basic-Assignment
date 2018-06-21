@@ -1,0 +1,31 @@
+<div class="container ">
+    <div class="row text-center" >
+      <div class="col-12">
+        <h1> {{currentBook.name  }}  </h1>
+  
+        <p class="">released on {{currentBook.released | date:'short' }}</p>
+       
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        
+        <hr>
+        <p *ngIf="currentBook.authors.length>0">Authors:
+          <span *ngFor="let author of currentBook.authors">{{author}}</span>
+        </p>
+        <hr>
+        <p>Isbn: {{currentBook.isbn}}</p>
+        <hr>
+        <p>Number Of Pages: {{currentBook.numberOfPages}}</p>
+        <hr>
+        <p>Publisher: {{currentBook.publisher}}</p>
+        <hr>
+        <p>Country: {{currentBook.country}}</p>
+        <hr>
+        <p>Media Type: {{currentBook.mediaType}}</p>
+        <hr>
+        <a class="btn btn-success btn-lg" routerLink='/home' >Go Back</a>
+      </div>
+    </div>
+  

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row text-center" >
+    <div class="col-md-12">
+      <h3> {{currentHouse.name}} </h3>
+      <br>
+      <hr>
+      <p>Region : {{currentHouse.region}} </p>
+      <hr>
+      <p>CoatOfArms: {{currentHouse.coatOfArms}} </p>
+      <hr>
+      <p *ngIf='currentHouse.titles.length>0'>Titles:
+          <span *ngFor='let title of currentHouse.titles;let first=first;let last=last'>{{title?title:'Not Defined In Api'}}{{last ? '' : ', '}}</span>
+  </p>
+  <hr>
+  <p >Words : {{currentHouse.words ? currentHouse.words: 'Not Defined In Api'}}</p>
+      <a class="btn btn-danger text-white btn-lg" routerLink="/home" >Go Home </a> 
+    </div>
+  </div>
+
+</div>>
